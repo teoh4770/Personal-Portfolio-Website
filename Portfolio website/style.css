@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+/* fixed variable on top */
+:root {
+  --blue: rgb(64, 98, 109);
+  --white: #ffffff;
+  --max-width: 700px;
+  --Poppins: "Poppins", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--Poppins);
+  letter-spacing: 0.3px;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* testing kit -  border: 1px solid black; */
+/* font-size */
+
+.nav-content h3 {
+  font-size: 1.1rem;
+}
+.header-content {
+  text-transform: capitalize;
+}
+.header-content h1 {
+  font-size: 3rem;
+}
+.header-content p {
+  font-size: 1.1rem;
+}
+
+/* end of general */
+
+/*************** navbar ***************/
+.nav {
+  background: lightblue;
+  height: 10vh;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  height: 10vh;
+  margin: 0 auto;
+  color: var(--white);
+}
+.nav-content ul {
+  display: flex;
+  list-style-type: none;
+}
+.nav-content li {
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+.nav-content li a {
+  text-decoration: none;
+  color: var(--white);
+}
+.nav-content li a:hover {
+  color: pink;
+}
+/*************** end navbar ***************/
+/*************** header ***************/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: lightblue;
+  height: 55vh;
+}
+
+/*************** end header ***************/
+/*************** about me ***************/
+.about-me {
+  position: relative;
+  bottom: 40px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  border-radius: 13px;
+  padding: 25px 50px;
+  background-color: beige;
+  scroll-margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+.about-me-content {
+  margin: 10px;
+}
+.about-page {
+  padding: 0.8rem 0rem;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin: auto;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* JS active class */
+.active,
+.about-page:hover {
+  background-color: #88dba3;
+}
+
+/* style the about body. Hidden by default */
+.about-body {
+  display: none;
+  overflow: hidden;
+}
+.about-page::after {
+  content: "\02795";
+  float: right;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+.active::after {
+  content: "\02796";
+}
+
+.about-me h3 {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 600;
+  /*text-shadow: 3px 2px 3px red;*/
+}
+.about-me p {
+  line-height: 1.6rem;
+  margin-bottom: 20px;
+  /* display: none; */
+}
+/*************** end about me ***************/
+/*************** projects ***************/
+.projects {
+  text-align: center;
+  max-width: 1050px;
+  padding: 2rem 0px;
+  border-top: 1px solid black;
+  scroll-margin-top: 20vh;
+}
+.projects-description {
+  padding-bottom: 2rem;
+}
+
+.projects-description h2 {
+  font-size: 1.6rem;
+}
+.projects-description p {
+  font-size: 1.2rem;
+}
+.tech-used {
+  margin: 30px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.tech-used div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tech-used .content {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 4px 7px;
+}
+.tech-used i {
+  margin-right: 10px;
+  font-size: 2rem;
+}
+.projects-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.project {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px 5px;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+.project h2 {
+  font-size: 1.25em;
+}
+.img-div {
+  width: 250px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.project img {
+  width: 100%;
+  height: 100%;
+}
+/*************** end projects ***************/
+/*************** footer ***************/
+.contact {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: grey;
+  color: white;
+  scroll-margin-top: 10vh;
+}
+
+.contact h3 {
+  font-size: 35pt;
+}
+
+.contact p {
+  margin: 13px;
+  font-size: 15pt;
+  font-style: italic;
+}
+
+.contact .fab,
+.contact .fas {
+  color: white;
+  margin: 13px;
+  font-size: 25pt;
+}
+.contact .fab:hover,
+.contact .fas:hover {
+  color: pink;
+}
+/*************** end of footer ***************/
+/* interaction */
+.content {
+  cursor: pointer;
+  background-color: white;
+}
+
+/* Responsive view */
+/* half screen */
+@media (max-width: 700px) {
+  .nav h3 {
+    display: none;
+  }
+  .nav ul {
+    margin: auto;
+  }
+  .nav-content li {
+    font-size: 1rem;
+  }
+  /* header */
+  .header-content h1,
+  .about-me .title {
+    font-size: 1.7rem;
+  }
+  .header-content p {
+    font-size: 0.7rem;
+  }
+  .about-me-content {
+    padding: 0 1.5rem;
+  }
+
+  /* adding margin to the about me passages */
+  .about-me-content .content {
+    margin: 1.5rem 0rem;
+  }
+  .about-me p {
+    padding: 0.5rem 0rem;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+  }
+  .about-me h3 {
+    font-size: 1rem;
+  }
+  .content h3 {
+    font-size: 0.95rem;
+  }
+  .tech-used .content {
+    width: 100vw;
+  }
+  .projects-description h2 {
+    font-size: 1.7rem;
+  }
+  .projects-description p {
+    font-size: 0.7rem;
+  }
+  .project {
+    width: 100vw;
+  }
+  .projects-gallery h2 {
+    font-size: 0.95rem;
+  }
+  .projects-gallery p {
+    width: 70%;
+    margin: auto;
+    font-size: 0.7rem;
+  }
+  .contact h3 {
+    font-size: 1.5rem;
+    width: 70%;
+    margin: auto;
+  }
+
+  .contact p {
+    font-size: 1.1rem;
+    width: 70%;
+    margin: 13px auto;
+  }
+
+  .contact .fab,
+  .contact .fas {
+    font-size: 1.2rem;
+  }
+}
